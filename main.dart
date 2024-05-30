@@ -23,45 +23,49 @@ void main(){
   print('[3] Multiplicacion');
   print('[4] Division');
   
-  //Para escoger la opcion que desea
-  stdout.write('Por favor, ingresa la opcion:');
-  int opcion = int.parse(stdin.readLineSync()!);
+  // Leer la opción del usuario desde la consola
+  stdout.write('Opción seleccionada: ');
+  String? opcionString = stdin.readLineSync();
 
-  //Flujo condicional
-  if(opcion == 1){
-    stdout.write('Ingresa el primer numero: ');
-    int num1 = int.parse(stdin.readLineSync()!);
-    stdout.write('Ingresa el segundo numero: ');
-    int num2 = int.parse(stdin.readLineSync()!);
-    int resultado = num1 + num2;
-    print('El resultado es: $resultado'); }
+  // Convertir la opción ingresada a un número entero
+  int opcion = int.tryParse(opcionString ?? '') ?? 0;
 
-   else if(opcion == 2){
-    stdout.write('Ingresa el primer numero: ');
-    int num1 = int.parse(stdin.readLineSync()!);
-    stdout.write('Ingresa el segundo numero: ');
-    int num2 = int.parse(stdin.readLineSync()!);
-    int resultado = num1 - num2;
-    print('El resultado es: $resultado'); }
+  // Variables para almacenar los valores ingresados por el usuario
+  num num1 = 0;
+  num num2 = 0;
 
-    else if(opcion == 3){
-    stdout.write('Ingresa el primer numero: ');
-    int num1 = int.parse(stdin.readLineSync()!);
-    stdout.write('Ingresa el segundo numero: ');
-    int num2 = int.parse(stdin.readLineSync()!);
-    int resultado = num1 * num2;
-    print('El resultado es: $resultado'); }
+  // Solicitar al usuario que ingrese los valores para las operaciones aritméticas
+  if (opcion >= 1 && opcion <= 4) {
+    stdout.write('Ingresa el primer número: ');
+    num1 = num.parse(stdin.readLineSync()!);
+    stdout.write('Ingresa el segundo número: ');
+    num2 = num.parse(stdin.readLineSync()!);
+  }
 
-    else if(opcion == 3){
-    stdout.write('Ingresa el primer numero: ');
-    int num1 = int.parse(stdin.readLineSync()!);
-    stdout.write('Ingresa el segundo numero: ');
-    int num2 = int.parse(stdin.readLineSync()!);
-    double resultado = num1 / num2;
-    print('El resultado es: $resultado'); }
-
-    else {
-      print('Opcion no valida');
-    }
+  // Flujo condicional basado en la opción ingresada por el usuario
+  switch (opcion) {
+    case 1:
+      num resultado = num1 + num2;
+      print('El resultado de la suma es: $resultado');
+      break;
+    case 2:
+      num resultado = num1 - num2;
+      print('El resultado de la resta es: $resultado');
+      break;
+    case 3:
+      num resultado = num1 * num2;
+      print('El resultado de la multiplicación es: $resultado');
+      break;
+    case 4:
+      if (num2 != 0) {
+        num resultado = num1 / num2;
+        print('El resultado de la división es: $resultado');
+      } else {
+        print('No se puede dividir por cero.');
+      }
+      break;
+    default:
+      print('Opción no válida');
+  }
 
 }
