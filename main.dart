@@ -36,7 +36,7 @@ void main(){
     int resultado = num1 + num2;
     print('El resultado es: $resultado'); }
 
-    if(opcion == 2){
+   else if(opcion == 2){
     stdout.write('Ingresa el primer numero: ');
     int num1 = int.parse(stdin.readLineSync()!);
     stdout.write('Ingresa el segundo numero: ');
@@ -44,7 +44,7 @@ void main(){
     int resultado = num1 - num2;
     print('El resultado es: $resultado'); }
 
-     if(opcion == 3){
+    else if(opcion == 3){
     stdout.write('Ingresa el primer numero: ');
     int num1 = int.parse(stdin.readLineSync()!);
     stdout.write('Ingresa el segundo numero: ');
@@ -52,7 +52,7 @@ void main(){
     int resultado = num1 * num2;
     print('El resultado es: $resultado'); }
 
-    if(opcion == 3){
+    else if(opcion == 3){
     stdout.write('Ingresa el primer numero: ');
     int num1 = int.parse(stdin.readLineSync()!);
     stdout.write('Ingresa el segundo numero: ');
