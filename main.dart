@@ -15,7 +15,7 @@ void main(){
   print('░                          ░                                                            ');
   stdout.writeln("Bienvenido al programa de calculo aritmentico");
   print('---------------------------------');
-  print('Desarollada por isntzero');
+  print('Desarollado por isntzero');
   print('---------------------------------');
   print('Elige una opcion');
   print('[1] Suma');
