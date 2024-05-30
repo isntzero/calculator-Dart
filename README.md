@@ -1,6 +1,6 @@
 ### calculator_dart
 
-![image](https://github.com/isntzero/Calculator-Dart/assets/47724579/c8120ce2-4365-41c3-b2e7-86cb95c87df8)
+![image](https://github.com/isntzero/Calculator-Dart/assets/47724579/92ea5f66-cd1c-4b6f-821b-012775d242cc)
 
 Este programa en Dart es un simple calculador aritmético que permite al usuario seleccionar una operación aritmética (suma, resta, multiplicación o división) y luego ingresar dos números para realizar la operación seleccionada.
 
